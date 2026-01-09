@@ -1,16 +1,15 @@
 "use client"
 
-import { Suspense, useEffect, useState } from "react"
-import dynamic from "next/dynamic"
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
-// Dynamically import Spline to avoid SSR issues - only load on desktop
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-  loading: () => <SplineFallback />,
-})
+export default function HeroBackground() {
+  const [mounted, setMounted] = useState(false)
 
-// Lightweight fallback background for mobile and loading state
-function SplineFallback() {
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <div className="absolute inset-0 bg-[#0a0a0f] overflow-hidden">
       {/* Animated gradient background */}
@@ -26,42 +25,82 @@ function SplineFallback() {
         <rect width="100%" height="100%" fill="url(#hero-grid)" />
       </svg>
       
-      {/* Glowing orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00f0ff]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[#ff0080]/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#8b5cf6]/5 rounded-full blur-3xl" />
-    </div>
-  )
-}
-
-export default function HeroBackground() {
-  const [isMobile, setIsMobile] = useState(true) // Default to mobile (lighter)
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-    // Check if device is mobile or has low performance
-    const checkDevice = () => {
-      const isMobileDevice = window.innerWidth < 1024 || 
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-      setIsMobile(isMobileDevice)
-    }
-    
-    checkDevice()
-    window.addEventListener('resize', checkDevice)
-    return () => window.removeEventListener('resize', checkDevice)
-  }, [])
-
-  // Always show fallback on mobile for performance
-  if (!mounted || isMobile) {
-    return <SplineFallback />
-  }
-
-  return (
-    <div className="absolute inset-0 z-0">
-      <Suspense fallback={<SplineFallback />}>
-        <Spline scene="https://prod.spline.design/a38eafa0-2fa5-4630-983f-6940475adf5e/scene.splinecode" />
-      </Suspense>
+      {/* Animated glowing orbs */}
+      {mounted && (
+        <>
+          <motion.div 
+            className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00f0ff]/10 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.15, 0.1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+          <motion.div 
+            className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[#ff0080]/10 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.3, 1],
+              opacity: [0.1, 0.2, 0.1],
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+          />
+          <motion.div 
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#8b5cf6]/5 rounded-full blur-3xl"
+            animate={{
+              scale: [1, 1.1, 1],
+              opacity: [0.05, 0.1, 0.05],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2,
+            }}
+          />
+          
+          {/* Floating particles */}
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 rounded-full"
+              style={{
+                left: `${10 + (i * 4.5) % 80}%`,
+                top: `${15 + (i * 7) % 70}%`,
+                background: i % 3 === 0 ? "#00f0ff" : i % 3 === 1 ? "#ff0080" : "#8b5cf6",
+              }}
+              animate={{
+                y: [0, -30, 0],
+                opacity: [0.2, 0.6, 0.2],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                duration: 4 + (i % 3),
+                delay: i * 0.3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          ))}
+        </>
+      )}
+      
+      {/* Static orbs for SSR */}
+      {!mounted && (
+        <>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#00f0ff]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[#ff0080]/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#8b5cf6]/5 rounded-full blur-3xl" />
+        </>
+      )}
     </div>
   )
 }
