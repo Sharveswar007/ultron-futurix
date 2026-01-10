@@ -262,7 +262,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-3 mt-6"
         >
           <a
-            href="https://hize2026.ieeecssrm.in/"
+            href="https://konfhub.com/checkout/high-impact-zonal-event-2026"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto"
