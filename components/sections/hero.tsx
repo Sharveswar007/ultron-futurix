@@ -261,9 +261,16 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="flex flex-col sm:flex-row gap-3 mt-6"
         >
-          <GlowingButton href="#register" variant="rainbow" className="w-full sm:w-auto">
-            Register Now
-          </GlowingButton>
+          <a
+            href="https://hize2026.ieeecssrm.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <GlowingButton variant="rainbow" className="w-full sm:w-auto">
+              Register Now
+            </GlowingButton>
+          </a>
           <GlowingButton href="#events" variant="primary" className="w-full sm:w-auto">
             Explore Events
           </GlowingButton>
