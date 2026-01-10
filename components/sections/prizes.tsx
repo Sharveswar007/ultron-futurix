@@ -41,7 +41,7 @@ const additionalPrizes = [
 
 export default function Prizes() {
   return (
-    <section className="py-18 px-4 relative overflow-hidden">
+    <section className="py-18 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Animated Background */}
       <AnimatedBackground variant="particles" />
 
@@ -57,18 +57,18 @@ export default function Prizes() {
         />
 
         {/* Main Prize Podium */}
-        <div className="flex flex-col md:flex-row items-end justify-center gap-6 mb-16">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-center gap-6 md:gap-8 mb-16">
           {/* 2nd Place */}
-          <ScrollReveal delay={0.2} className="order-2 md:order-1">
+          <ScrollReveal delay={0.2} className="order-2 md:order-1 w-full max-w-[280px] sm:max-w-none">
             <div className="relative">
-              <GlassCard className="text-center w-60 pb-6">
+              <GlassCard className="text-center w-full sm:w-60 pb-6">
                 <div
                   className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center bg-gradient-to-br ${mainPrizes[1].gradient}`}
                 >
                   <Medal className="w-8 h-8 text-black" />
                 </div>
-                <span className="text-2xl font-bold text-white/50">{mainPrizes[1].position}</span>
-                <div className="text-3xl font-bold gradient-text my-3">{mainPrizes[1].prize}</div>
+                <span className="text-xl sm:text-2xl font-bold text-white/50">{mainPrizes[1].position}</span>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text my-3">{mainPrizes[1].prize}</div>
                 <ul className="space-y-2">
                   {mainPrizes[1].extras.map((extra) => (
                     <li key={extra} className="text-white/60 text-sm">
@@ -82,9 +82,9 @@ export default function Prizes() {
           </ScrollReveal>
 
           {/* 1st Place */}
-          <ScrollReveal delay={0.1} className="order-1 md:order-2">
+          <ScrollReveal delay={0.1} className="order-1 md:order-2 w-full max-w-[300px] sm:max-w-none">
             <div className="relative">
-              <GlassCard className="text-center w-64 pb-6 border-yellow-500/30">
+              <GlassCard className="text-center w-full sm:w-64 pb-6 border-yellow-500/30">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-full text-black text-xs font-bold">
                   GRAND PRIZE
                 </div>
@@ -93,8 +93,8 @@ export default function Prizes() {
                 >
                   <Trophy className="w-10 h-10 text-black" />
                 </div>
-                <span className="text-3xl font-bold text-yellow-500">{mainPrizes[0].position}</span>
-                <div className="text-4xl font-bold gradient-text my-3">{mainPrizes[0].prize}</div>
+                <span className="text-2xl sm:text-3xl font-bold text-yellow-500">{mainPrizes[0].position}</span>
+                <div className="text-3xl sm:text-4xl font-bold gradient-text my-3">{mainPrizes[0].prize}</div>
                 <ul className="space-y-2">
                   {mainPrizes[0].extras.map((extra) => (
                     <li key={extra} className="text-white/60 text-sm">
@@ -108,16 +108,16 @@ export default function Prizes() {
           </ScrollReveal>
 
           {/* 3rd Place */}
-          <ScrollReveal delay={0.3} className="order-3">
+          <ScrollReveal delay={0.3} className="order-3 w-full max-w-[280px] sm:max-w-none">
             <div className="relative">
-              <GlassCard className="text-center w-60 pb-6">
+              <GlassCard className="text-center w-full sm:w-60 pb-6">
                 <div
                   className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center bg-gradient-to-br ${mainPrizes[2].gradient}`}
                 >
                   <Award className="w-8 h-8 text-black" />
                 </div>
-                <span className="text-2xl font-bold text-amber-700">{mainPrizes[2].position}</span>
-                <div className="text-3xl font-bold gradient-text my-3">{mainPrizes[2].prize}</div>
+                <span className="text-xl sm:text-2xl font-bold text-amber-700">{mainPrizes[2].position}</span>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text my-3">{mainPrizes[2].prize}</div>
                 <ul className="space-y-2">
                   {mainPrizes[2].extras.map((extra) => (
                     <li key={extra} className="text-white/60 text-sm">
