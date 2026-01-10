@@ -12,6 +12,7 @@ const quickLinks = [
   { name: "Team", href: "#team" },
   { name: "Register", href: "#register" },
   { name: "Contact", href: "#contact" },
+  { name: "Feeling bored?", href: "/game" },
 ]
 
 const eventLinks = [
