@@ -81,12 +81,14 @@ export default function Header() {
 
           {/* Register Button */}
           <div className="hidden md:block">
-            <Link
-              href="/#register"
+            <a
+              href="https://hize2026.ieeecssrm.in/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-[#00f0ff] to-[#ff0080] text-black font-bold text-sm tracking-wider rounded-full hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] transition-all duration-300"
             >
               REGISTER NOW
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
