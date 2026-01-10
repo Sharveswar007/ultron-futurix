@@ -35,19 +35,34 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg overflow-hidden">
-              <Image
-                src="/images/futurix-logo.jpg"
-                alt="Futurix Logo"
-                width={40}
-                height={40}
-                className="object-cover"
-              />
-            </div>
-            <span className="text-xl font-bold tracking-wider">
-              <span className="text-[#00f0ff]">FUTURIX</span>
-            </span>
+          <Link href="#home" className="flex items-center group">
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <motion.div
+                animate={{
+                  y: [0, -3, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Image
+                  src="/images/futurixtech-logo-new.png"
+                  alt="FuturixTech Logo"
+                  width={288}
+                  height={80}
+                  className="object-contain drop-shadow-[0_0_15px_rgba(138,43,226,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(138,43,226,0.8)] transition-all duration-300"
+                  priority
+                />
+              </motion.div>
+            </motion.div>
           </Link>
 
           {/* Desktop Navigation */}

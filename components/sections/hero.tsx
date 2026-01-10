@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import dynamic from "next/dynamic"
+import Image from "next/image"
 import SparklyText from "@/components/ui/sparkly-text"
 import TextFlip from "@/components/ui/text-flip"
 import GlowingButton from "@/components/ui/glowing-button"
@@ -204,65 +205,19 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-6"
         >
-          {/* FUTURIX Title with animated glow effect */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-4 relative">
-            {/* Glow layer behind text */}
-            <motion.span
-              className="absolute inset-0 text-[#00f0ff] blur-lg opacity-60"
-              animate={{
-                opacity: [0.4, 0.8, 0.4],
-                scale: [1, 1.02, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              aria-hidden="true"
-            >
-              FUTURIX
-            </motion.span>
-
-            {/* Main text with shimmer animation */}
-            <motion.span
-              className="relative text-[#00f0ff] inline-block"
-              style={{
-                textShadow: '0 0 30px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 240, 255, 0.5), 0 0 100px rgba(0, 240, 255, 0.3)',
-              }}
-              animate={{
-                textShadow: [
-                  '0 0 30px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 240, 255, 0.5), 0 0 100px rgba(0, 240, 255, 0.3)',
-                  '0 0 50px rgba(0, 240, 255, 1), 0 0 100px rgba(255, 0, 128, 0.6), 0 0 150px rgba(0, 240, 255, 0.5)',
-                  '0 0 30px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 240, 255, 0.5), 0 0 100px rgba(0, 240, 255, 0.3)',
-                ],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              {"FUTURIX".split("").map((letter, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.5 + index * 0.1,
-                  }}
-                  whileHover={{
-                    scale: 1.2,
-                    color: "#ff0080",
-                    textShadow: "0 0 40px rgba(255, 0, 128, 0.8)",
-                  }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.span>
-          </h1>
+          {/* ULTRON 9.0 Logo - Clean and Sharp */}
+          <div className="mb-4 mt-2">
+            <Image
+              src="/images/ultron-hero-logo.png"
+              alt="ULTRON 9.0"
+              width={600}
+              height={150}
+              className="w-full max-w-xl h-auto"
+              priority
+              quality={100}
+              style={{ imageRendering: 'crisp-edges' }}
+            />
+          </div>
 
           {/* Student Technology Association label */}
           <motion.div
