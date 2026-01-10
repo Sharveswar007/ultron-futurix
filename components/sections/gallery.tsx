@@ -162,20 +162,21 @@ export default function Gallery() {
             </div>
           </ScrollReveal>
 
-          <motion.div layout className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <AnimatePresence mode="popLayout">
-              {filteredImages.map((img, index) => (
-                  <ScrollReveal key={img.id} delay={index * 0.05}>
-                    <motion.div
-                        layout
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.8 }}
-                        className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
-                        onClick={() => setSelectedImage(img.id)}
-                        whileHover={{ scale: 1.015 }}
-                        transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }}
-                    >
+          <motion.div layout className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-[#00f0ff]/20 scrollbar-track-transparent hover:scrollbar-thumb-[#00f0ff]/40">
+            <div className="flex gap-4 min-w-max">
+              <AnimatePresence mode="popLayout">
+                {filteredImages.map((img, index) => (
+                    <ScrollReveal key={img.id} delay={index * 0.05}>
+                      <motion.div
+                          layout
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.8 }}
+                          className="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden cursor-pointer group flex-shrink-0"
+                          onClick={() => setSelectedImage(img.id)}
+                          whileHover={{ scale: 1.015 }}
+                          transition={{ duration: 0.4, ease: [0.34, 1.56, 0.64, 1] }}
+                      >
                       <Image
                           src={img.src}
                           alt={img.title}
@@ -212,6 +213,7 @@ export default function Gallery() {
                   </ScrollReveal>
               ))}
             </AnimatePresence>
+            </div>
           </motion.div>
 
           <AnimatePresence>

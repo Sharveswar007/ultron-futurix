@@ -9,12 +9,7 @@ import SectionHeader from "@/components/ui/section-header"
 import GlassCard from "@/components/ui/glass-card"
 import AnimatedBackground from "@/components/ui/animated-background"
 
-const stats = [
-  { icon: Accessibility, value: "50+", label: "Events" },
-  { icon: ShieldCheck, value: "5000+", label: "Participants" },
-  { icon: Trophy, value: "₹5L+", label: "Prize Pool" },
-  { icon: Rocket, value: "3", label: "Days" },
-]
+
 
 // Vision, Mission, Objectives data - Updated with new content
 const visionMissionData = [
@@ -59,7 +54,7 @@ const domainsData = [
     description: "Creating intelligent hardware–software solutions by connecting devices, sensors, and real-world systems.",
   },
   {
-    title: "Healthcar",
+    title: "Healthcare",
     icon: HeartPulse,
     color: "#00f0ff",
     description: "Leveraging technology to improve healthcare access, diagnostics, patient care, and medical workflows.",
@@ -240,7 +235,7 @@ function DomainCard({ item, index }: { item: typeof domainsData[0]; index: numbe
     >
       <GlassCard className="h-full group">
         <motion.div
-          className="p-6 text-center"
+          className="p-4 sm:p-6 text-center"
           whileHover={{ y: -4 }}
           transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
         >
@@ -257,10 +252,9 @@ function DomainCard({ item, index }: { item: typeof domainsData[0]; index: numbe
           >
             <item.icon className="w-7 h-7" style={{ color: item.color }} />
           </motion.div>
-          <h4 className="text-lg font-bold text-white mb-2 group-hover:text-[#00f0ff] transition-colors">
+          <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-[#00f0ff] transition-colors break-words">
             {item.title}
           </h4>
-          <p className="text-white/60 text-sm leading-relaxed">{item.description}</p>
         </motion.div>
       </GlassCard>
     </motion.div>
@@ -273,7 +267,7 @@ function ConvenorSection() {
     <ScrollReveal>
       <div className="mt-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-[#00f0ff]/5 via-transparent to-[#ff0080]/5 rounded-3xl" />
-        <GlassCard className="relative p-8 md:p-12">
+        <GlassCard className="relative p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             {/* Avatar with real image */}
             <motion.div
@@ -308,9 +302,8 @@ function ConvenorSection() {
             <div className="text-center md:text-left flex-1">
               <h3 className="text-2xl font-bold text-white mb-2">Convenor&apos;s Message</h3>
               <h4 className="text-lg font-semibold text-[#00f0ff] mb-4">Dr. Kanisha B</h4>
-              <p className="text-white/70 leading-relaxed text-lg italic">
-                &quot;Futurix is a space where every student is encouraged to dream, experiment, and grow.
-                We believe that every great journey begins with the courage to take the first step.&quot;
+              <p className="text-white/70 leading-relaxed italic">
+                &quot;Futurix is a space where every student is encouraged to dream, experiment, and grow.&quot;
               </p>
               <p className="text-[#ff0080] text-sm mt-4 font-medium">
                 Convenor, Futurix Association
@@ -325,7 +318,7 @@ function ConvenorSection() {
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-4 relative overflow-hidden">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Animated Background */}
       <AnimatedBackground variant="grid" />
 
@@ -342,32 +335,12 @@ export default function About() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <ScrollReveal>
-            <div className="space-y-6">
+            <div className="space-y-4">
               <p className="text-white/70 text-lg leading-relaxed">
                 We are a vibrant student-powered tech community where imagination meets innovation.
                 From brainstorming bold ideas to transforming them into impactful real-world solutions,
                 Futurix encourages students to learn by doing, experiment without fear, and grow through collaboration.
               </p>
-              <p className="text-white/70 text-lg leading-relaxed">
-                Whether it&apos;s technology, creativity, or leadership, Futurix is the space where
-                <span className="text-[#00f0ff] font-semibold"> ideas evolve into action</span>.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {["Hackathons", "Workshops", "Competitions", "Guest Talks", "Real-World Projects"].map((tag) => (
-                  <motion.span
-                    key={tag}
-                    className="px-4 py-2 rounded-full text-sm font-medium border border-[#00f0ff]/30 text-[#00f0ff] bg-[#00f0ff]/5 cursor-default"
-                    whileHover={{
-                      scale: 1.05,
-                      boxShadow: "0 0 20px rgba(0, 240, 255, 0.3)",
-                      borderColor: "rgba(0, 240, 255, 0.6)",
-                    }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {tag}
-                  </motion.span>
-                ))}
-              </div>
             </div>
           </ScrollReveal>
 
@@ -384,7 +357,7 @@ export default function About() {
         </div>
 
         {/* Vision, Mission, Objectives */}
-       {/* <div className="mb-16">
+        {/* <div className="mb-16">
           <ScrollReveal>
             <h3 className="text-2xl font-bold text-center text-white mb-8">
               Our <span className="text-[#00f0ff]">Foundation</span>
@@ -414,7 +387,7 @@ export default function About() {
               Allowed <span className="text-[#ff0080]">Tracks</span>
             </h3>
           </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {domainsData.map((item, index) => (
               <DomainCard key={item.title} item={item} index={index} />
             ))}
@@ -422,17 +395,7 @@ export default function About() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index) => (
-            <ScrollReveal key={stat.label} delay={index * 0.1}>
-              <GlassCard className="text-center py-8 hover-lift">
-                <stat.icon className="w-10 h-10 text-[#00f0ff] mx-auto mb-4" />
-                <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-white/60 text-sm uppercase tracking-wider">{stat.label}</div>
-              </GlassCard>
-            </ScrollReveal>
-          ))}
-        </div>
+
 
         {/* Convenor Section */}
         <ConvenorSection />

@@ -7,12 +7,13 @@ import Link from "next/link"
 import Image from "next/image"
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Timeline", href: "#timeline" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Team", href: "#team" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Timeline", href: "/#timeline" },
+  { name: "Gallery", href: "/#gallery" },
+  { name: "Team", href: "/#team" },
+
+  // { name: "Game", href: "/game" },
 ]
 
 export default function Header() {
@@ -35,19 +36,34 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg overflow-hidden">
-              <Image
-                src="/images/futurix-logo.jpg"
-                alt="Futurix Logo"
-                width={40}
-                height={40}
-                className="object-cover"
-              />
-            </div>
-            <span className="text-xl font-bold tracking-wider">
-              <span className="text-[#00f0ff]">FUTURIX</span>
-            </span>
+          <Link href="/#home" className="flex items-center group">
+            <motion.div
+              className="relative"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <motion.div
+                animate={{
+                  y: [0, -3, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Image
+                  src="/images/futurixtech-logo-new.png"
+                  alt="FuturixTech Logo"
+                  width={200}
+                  height={56}
+                  className="object-contain drop-shadow-[0_0_15px_rgba(138,43,226,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(138,43,226,0.8)] transition-all duration-300"
+                  priority
+                />
+              </motion.div>
+            </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -65,12 +81,14 @@ export default function Header() {
 
           {/* Register Button */}
           <div className="hidden md:block">
-            <Link
-              href="#register"
+            <a
+              href="https://konfhub.com/checkout/high-impact-zonal-event-2026"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-[#00f0ff] to-[#ff0080] text-black font-bold text-sm tracking-wider rounded-full hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] transition-all duration-300"
             >
               REGISTER NOW
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -105,7 +123,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="#register"
+                href="https://konfhub.com/checkout/high-impact-zonal-event-2026"
                 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-[#00f0ff] to-[#ff0080] text-black font-bold text-sm tracking-wider rounded-full mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import dynamic from "next/dynamic"
+import Image from "next/image"
 import SparklyText from "@/components/ui/sparkly-text"
 import TextFlip from "@/components/ui/text-flip"
 import GlowingButton from "@/components/ui/glowing-button"
@@ -196,7 +197,7 @@ export default function Hero() {
       <TargetCircle className="absolute left-[15%] top-[35%] z-20 hidden lg:block" />
 
       {/* Main Content - Left Aligned */}
-      <div className="relative z-20 px-8 md:px-16 lg:px-24 max-w-4xl">
+      <div className="relative z-20 px-4 sm:px-8 md:px-16 lg:px-24 max-w-4xl">
         {/* Main Title - Large and Bold */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -204,65 +205,19 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-6"
         >
-          {/* FUTURIX Title with animated glow effect */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tight mb-4 relative">
-            {/* Glow layer behind text */}
-            <motion.span
-              className="absolute inset-0 text-[#00f0ff] blur-lg opacity-60"
-              animate={{
-                opacity: [0.4, 0.8, 0.4],
-                scale: [1, 1.02, 1],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              aria-hidden="true"
-            >
-              FUTURIX
-            </motion.span>
-
-            {/* Main text with shimmer animation */}
-            <motion.span
-              className="relative text-[#00f0ff] inline-block"
-              style={{
-                textShadow: '0 0 30px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 240, 255, 0.5), 0 0 100px rgba(0, 240, 255, 0.3)',
-              }}
-              animate={{
-                textShadow: [
-                  '0 0 30px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 240, 255, 0.5), 0 0 100px rgba(0, 240, 255, 0.3)',
-                  '0 0 50px rgba(0, 240, 255, 1), 0 0 100px rgba(255, 0, 128, 0.6), 0 0 150px rgba(0, 240, 255, 0.5)',
-                  '0 0 30px rgba(0, 240, 255, 0.8), 0 0 60px rgba(0, 240, 255, 0.5), 0 0 100px rgba(0, 240, 255, 0.3)',
-                ],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              {"FUTURIX".split("").map((letter, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.4,
-                    delay: 0.5 + index * 0.1,
-                  }}
-                  whileHover={{
-                    scale: 1.2,
-                    color: "#ff0080",
-                    textShadow: "0 0 40px rgba(255, 0, 128, 0.8)",
-                  }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.span>
-          </h1>
+          {/* ULTRON 9.0 Logo - Clean and Sharp */}
+          <div className="mb-4 mt-2">
+            <Image
+              src="/images/ultron-hero-logo.png"
+              alt="ULTRON 9.0"
+              width={600}
+              height={150}
+              className="w-full max-w-[280px] sm:max-w-md md:max-w-xl h-auto"
+              priority
+              quality={100}
+              style={{ imageRendering: 'crisp-edges' }}
+            />
+          </div>
 
           {/* Student Technology Association label */}
           <motion.div
@@ -289,53 +244,34 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mb-6"
         >
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white/90 tracking-wide mb-2">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white/90 tracking-wide mb-2">
             <span className="text-[#00f0ff]">Innovators Today.</span>{" "}
             <span className="text-[#ff0080]">Leaders Tomorrow.</span>
           </h2>
-          <p className="text-lg md:text-xl text-white/60 italic">
-            Where Ideas Ignite. Futures Take Shape.
-          </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-white/60 text-base md:text-lg font-light tracking-wide max-w-lg mb-8 leading-relaxed"
-        >
-          <span>Futurix is a student-driven association where curiosity fuels </span>
-          <TextFlip
-            words={["innovation", "creativity", "leadership", "the future"]}
-            className="font-bold text-[#00f0ff]"
-          />
-          <span> and passion transforms students into tomorrow&apos;s changemakers.</span>
-        </motion.div>
 
-        {/* Event Date */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="flex items-center gap-4 mb-8"
-        >
-          <div className="h-[2px] w-12 bg-gradient-to-r from-[#00f0ff] to-[#ff0080]" />
-          <span className="text-white text-sm font-mono tracking-widest">STUDENT TECHNOLOGY ASSOCIATION</span>
-        </motion.div>
+
+
 
         {/* CTA Button with glow effect */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex gap-4"
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex flex-col sm:flex-row gap-3 mt-6"
         >
-          <GlowingButton href="#register" variant="rainbow">
-            Register Now
-          </GlowingButton>
-          <GlowingButton href="#events" variant="primary">
-            Explore Events
-          </GlowingButton>
+          <a
+            href="https://konfhub.com/checkout/high-impact-zonal-event-2026"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <GlowingButton variant="rainbow" className="w-full sm:w-auto">
+              Register Now
+            </GlowingButton>
+          </a>
+
         </motion.div>
       </div>
 

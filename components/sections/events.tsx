@@ -133,9 +133,8 @@ function TimelineCard({
       initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`relative flex ${
-        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-      } gap-8`}
+      className={`relative flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        } gap-8`}
     >
       {/* Timeline Dot */}
       <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-[#0a0a0f] border-2 border-[#00f0ff] rounded-full flex items-center justify-center -translate-x-1/2 z-10">
@@ -161,7 +160,7 @@ function TimelineCard({
             {event.time}
           </p>
 
-          <p className="text-white/70 text-sm leading-relaxed">
+          <p className="text-white/70 text-sm leading-relaxed break-words">
             {event.description}
           </p>
         </div>
