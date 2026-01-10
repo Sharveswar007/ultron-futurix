@@ -12,7 +12,7 @@ const navLinks = [
   { name: "Timeline", href: "/#timeline" },
   { name: "Gallery", href: "/#gallery" },
   { name: "Team", href: "/#team" },
-  { name: "FAQ", href: "/#faq" },
+
   { name: "Game", href: "/game" },
 ]
 
@@ -57,8 +57,8 @@ export default function Header() {
                 <Image
                   src="/images/futurixtech-logo-new.png"
                   alt="FuturixTech Logo"
-                  width={288}
-                  height={80}
+                  width={200}
+                  height={56}
                   className="object-contain drop-shadow-[0_0_15px_rgba(138,43,226,0.5)] group-hover:drop-shadow-[0_0_25px_rgba(138,43,226,0.8)] transition-all duration-300"
                   priority
                 />

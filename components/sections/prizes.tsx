@@ -61,7 +61,7 @@ export default function Prizes() {
           {/* 2nd Place */}
           <ScrollReveal delay={0.2} className="order-2 md:order-1 w-full max-w-[280px] sm:max-w-none">
             <div className="relative">
-              <GlassCard className="text-center w-full sm:w-60 pb-6">
+              <GlassCard className="text-center w-full sm:w-60 pb-6 mx-auto">
                 <div
                   className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center bg-gradient-to-br ${mainPrizes[1].gradient}`}
                 >
@@ -84,7 +84,7 @@ export default function Prizes() {
           {/* 1st Place */}
           <ScrollReveal delay={0.1} className="order-1 md:order-2 w-full max-w-[300px] sm:max-w-none">
             <div className="relative">
-              <GlassCard className="text-center w-full sm:w-64 pb-6 border-yellow-500/30">
+              <GlassCard className="text-center w-full sm:w-64 pb-6 border-yellow-500/30 mx-auto">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-yellow-500 to-amber-600 rounded-full text-black text-xs font-bold">
                   GRAND PRIZE
                 </div>
@@ -110,7 +110,7 @@ export default function Prizes() {
           {/* 3rd Place */}
           <ScrollReveal delay={0.3} className="order-3 w-full max-w-[280px] sm:max-w-none">
             <div className="relative">
-              <GlassCard className="text-center w-full sm:w-60 pb-6">
+              <GlassCard className="text-center w-full sm:w-60 pb-6 mx-auto">
                 <div
                   className={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center bg-gradient-to-br ${mainPrizes[2].gradient}`}
                 >

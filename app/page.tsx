@@ -36,14 +36,7 @@ const Prizes = dynamic(() => import("@/components/sections/prizes"), {
   ssr: true,
   loading: () => <SectionLoader />
 })
-const FAQ = dynamic(() => import("@/components/sections/faq"), {
-  ssr: true,
-  loading: () => <SectionLoader />
-})
-{/*const Registration = dynamic(() => import("@/components/sections/registration"), {
-  ssr: true,
-  loading: () => <SectionLoader />
-})*/}
+
 
 // Load cyber cursor only on client side (desktop only)
 const CyberCursor = dynamic(() => import("@/components/ui/cyber-cursor"), {
