@@ -82,7 +82,7 @@ export default function Header() {
           {/* Register Button */}
           <div className="hidden md:block">
             <a
-              href="https://hize2026.ieeecssrm.in/"
+              href="https://konfhub.com/checkout/high-impact-zonal-event-2026"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-[#00f0ff] to-[#ff0080] text-black font-bold text-sm tracking-wider rounded-full hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] transition-all duration-300"
