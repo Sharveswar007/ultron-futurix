@@ -7,12 +7,13 @@ import Link from "next/link"
 import Image from "next/image"
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Timeline", href: "#timeline" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Team", href: "#team" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Home", href: "/#home" },
+  { name: "About", href: "/#about" },
+  { name: "Timeline", href: "/#timeline" },
+  { name: "Gallery", href: "/#gallery" },
+  { name: "Team", href: "/#team" },
+  { name: "FAQ", href: "/#faq" },
+  { name: "Game", href: "/game" },
 ]
 
 export default function Header() {
@@ -35,7 +36,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="#home" className="flex items-center group">
+          <Link href="/#home" className="flex items-center group">
             <motion.div
               className="relative"
               initial={{ opacity: 0, x: -20 }}
@@ -81,7 +82,7 @@ export default function Header() {
           {/* Register Button */}
           <div className="hidden md:block">
             <Link
-              href="#register"
+              href="/#register"
               className="px-6 py-2.5 bg-gradient-to-r from-[#00f0ff] to-[#ff0080] text-black font-bold text-sm tracking-wider rounded-full hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] transition-all duration-300"
             >
               REGISTER NOW
@@ -120,7 +121,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="#register"
+                href="/#register"
                 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-[#00f0ff] to-[#ff0080] text-black font-bold text-sm tracking-wider rounded-full mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

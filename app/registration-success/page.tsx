@@ -15,10 +15,10 @@ const cyberpunkImages = [
 
 // Floating cyberpunk image component
 function FloatingImage({
-    src,
-    size,
-    delay
-}: {
+                           src,
+                           size,
+                           delay
+                       }: {
     src: string
     size: number
     delay: number
@@ -376,6 +376,17 @@ export default function RegistrationSuccessPage() {
                                     />
                                 </div>
                             </motion.div>
+
+                            <div className="mb-6">
+                                <a
+                                    href="https://example.org"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-sm text-white/60 hover:text-[#00f0ff] hover:underline transition-colors break-all"
+                                >
+                                    In case the QR didn't work, click here.
+                                </a>
+                            </div>
 
                             {/* Scan instruction */}
                             <motion.div
