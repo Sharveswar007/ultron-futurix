@@ -123,7 +123,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="/#register"
+                href="https://konfhub.com/checkout/high-impact-zonal-event-2026"
                 className="block w-full text-center px-6 py-3 bg-gradient-to-r from-[#00f0ff] to-[#ff0080] text-black font-bold text-sm tracking-wider rounded-full mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
