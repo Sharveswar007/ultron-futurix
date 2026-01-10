@@ -242,10 +242,12 @@
 
 /* Float animation - smoother with longer duration */
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -257,10 +259,12 @@
 
 /* Pulse glow effect - smoother with gentler transition */
 @keyframes pulse-glow {
+
   0%,
   100% {
     box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(0, 240, 255, 0.6), 0 0 60px rgba(0, 240, 255, 0.3);
   }
@@ -304,10 +308,12 @@
 
 /* Bounce subtle - smoother with gentler curve */
 @keyframes bounce-subtle {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
@@ -323,12 +329,15 @@
     transform: translateY(0);
     opacity: 0;
   }
+
   10% {
     opacity: 0.7;
   }
+
   90% {
     opacity: 0.7;
   }
+
   100% {
     transform: translateY(-800px);
     opacity: 0;
