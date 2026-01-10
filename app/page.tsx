@@ -81,7 +81,7 @@ export default function Home() {
         <Gallery />
         <Team />
         <Prizes />
-        <FAQ />
+        {/* <FAQ /> */}
         <Registration />
         <Footer />
       </main>
