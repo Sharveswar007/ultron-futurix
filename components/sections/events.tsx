@@ -155,15 +155,15 @@ function TimelineCard({
 
       {/* Card */}
       <div className="ml-16 md:ml-0 md:w-[calc(50%-2rem)]">
-        <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
-          <div className="flex items-center gap-3 mb-3">
+        <div className="p-4 sm:p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
             <span className="px-3 py-1 text-xs font-bold bg-[#00f0ff]/20 text-[#00f0ff] rounded-full">
               {event.day}
             </span>
             <span className="text-white/50 text-sm">{event.date}</span>
           </div>
 
-          <h3 className="text-xl font-bold text-white mb-2">
+          <h3 className="text-lg sm:text-xl font-bold text-white mb-2 break-words">
             {event.title}
           </h3>
 
@@ -172,7 +172,7 @@ function TimelineCard({
             {event.time}
           </p>
 
-          <p className="text-white/70 text-sm leading-relaxed">
+          <p className="text-white/70 text-sm leading-relaxed break-words">
             {event.description}
           </p>
         </div>
@@ -187,7 +187,7 @@ function TimelineCard({
 
 export default function Events() {
   return (
-    <section id="timeline" className="py-18 px-4 relative overflow-hidden">
+    <section id="timeline" className="py-18 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <AnimatedBackground variant="grid" />
 
       <div className="max-w-5xl mx-auto relative z-10">

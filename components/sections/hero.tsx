@@ -197,7 +197,7 @@ export default function Hero() {
       <TargetCircle className="absolute left-[15%] top-[35%] z-20 hidden lg:block" />
 
       {/* Main Content - Left Aligned */}
-      <div className="relative z-20 px-8 md:px-16 lg:px-24 max-w-4xl">
+      <div className="relative z-20 px-4 sm:px-8 md:px-16 lg:px-24 max-w-4xl">
         {/* Main Title - Large and Bold */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -212,7 +212,7 @@ export default function Hero() {
               alt="ULTRON 9.0"
               width={600}
               height={150}
-              className="w-full max-w-xl h-auto"
+              className="w-full max-w-[280px] sm:max-w-md md:max-w-xl h-auto"
               priority
               quality={100}
               style={{ imageRendering: 'crisp-edges' }}
@@ -244,7 +244,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mb-6"
         >
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white/90 tracking-wide mb-2">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white/90 tracking-wide mb-2">
             <span className="text-[#00f0ff]">Innovators Today.</span>{" "}
             <span className="text-[#ff0080]">Leaders Tomorrow.</span>
           </h2>
@@ -259,12 +259,12 @@ export default function Hero() {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="flex gap-3 mt-6"
+          className="flex flex-col sm:flex-row gap-3 mt-6"
         >
-          <GlowingButton href="#register" variant="rainbow">
+          <GlowingButton href="#register" variant="rainbow" className="w-full sm:w-auto">
             Register Now
           </GlowingButton>
-          <GlowingButton href="#events" variant="primary">
+          <GlowingButton href="#events" variant="primary" className="w-full sm:w-auto">
             Explore Events
           </GlowingButton>
         </motion.div>

@@ -240,7 +240,7 @@ function DomainCard({ item, index }: { item: typeof domainsData[0]; index: numbe
     >
       <GlassCard className="h-full group">
         <motion.div
-          className="p-6 text-center"
+          className="p-4 sm:p-6 text-center"
           whileHover={{ y: -4 }}
           transition={{ duration: 0.3, ease: [0.34, 1.56, 0.64, 1] }}
         >
@@ -257,7 +257,7 @@ function DomainCard({ item, index }: { item: typeof domainsData[0]; index: numbe
           >
             <item.icon className="w-7 h-7" style={{ color: item.color }} />
           </motion.div>
-          <h4 className="text-lg font-bold text-white group-hover:text-[#00f0ff] transition-colors">
+          <h4 className="text-base sm:text-lg font-bold text-white group-hover:text-[#00f0ff] transition-colors break-words">
             {item.title}
           </h4>
         </motion.div>
@@ -323,7 +323,7 @@ function ConvenorSection() {
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 relative overflow-hidden">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Animated Background */}
       <AnimatedBackground variant="grid" />
 
@@ -392,7 +392,7 @@ export default function About() {
               Allowed <span className="text-[#ff0080]">Tracks</span>
             </h3>
           </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {domainsData.map((item, index) => (
               <DomainCard key={item.title} item={item} index={index} />
             ))}
