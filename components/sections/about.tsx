@@ -384,7 +384,7 @@ export default function About() {
         </div>
 
         {/* Vision, Mission, Objectives */}
-        <div className="mb-16">
+       {/* <div className="mb-16">
           <ScrollReveal>
             <h3 className="text-2xl font-bold text-center text-white mb-8">
               Our <span className="text-[#00f0ff]">Foundation</span>
@@ -395,7 +395,7 @@ export default function About() {
               <VisionMissionCard key={item.title} item={item} index={index} />
             ))}
           </div>
-        </div> 
+        </div> */}
 
         {/* Tagline */}
         <ScrollReveal>
