@@ -110,8 +110,7 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
 
           <div className="p-5 text-center">
             <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
-            <p className="text-sm font-medium mb-3" style={{ color: member.color }}>{member.role}</p>
-            <p className="text-white/40 text-xs">Hover to learn more</p>
+            <p className="text-sm font-medium" style={{ color: member.color }}>{member.role}</p>
           </div>
 
           {/* Bottom accent */}
@@ -135,7 +134,7 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
             {/* Small avatar circle */}
             <div
               className="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 relative"
-              style={{ 
+              style={{
                 borderColor: `${member.color}60`,
                 boxShadow: `0 0 18px ${member.color}35`
               }}
@@ -219,7 +218,7 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
 
 export default function Team() {
   return (
-    <section id="team" className="py-24 px-4 bg-gradient-to-b from-black via-[#0a0a15] to-black relative overflow-hidden">
+    <section id="team" className="py-18 px-4 bg-gradient-to-b from-black via-[#0a0a15] to-black relative overflow-hidden">
       {/* Animated Background - simplified */}
       <AnimatedBackground variant="waves" />
 
