@@ -13,7 +13,7 @@ const navLinks = [
   { name: "Gallery", href: "/#gallery" },
   { name: "Team", href: "/#team" },
 
-  { name: "Game", href: "/game" },
+  // { name: "Game", href: "/game" },
 ]
 
 export default function Header() {

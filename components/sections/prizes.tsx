@@ -9,7 +9,7 @@ import AnimatedBackground from "@/components/ui/animated-background"
 const mainPrizes = [
   {
     position: "1st",
-    prize: "₹1,00,000",
+    prize: "₹5,000",
     icon: Trophy,
     color: "#FFD700",
     gradient: "from-yellow-500 to-amber-600",
@@ -17,7 +17,7 @@ const mainPrizes = [
   },
   {
     position: "2nd",
-    prize: "₹50,000",
+    prize: "₹2,500",
     icon: Medal,
     color: "#C0C0C0",
     gradient: "from-gray-300 to-gray-500",
@@ -25,7 +25,7 @@ const mainPrizes = [
   },
   {
     position: "3rd",
-    prize: "₹25,000",
+    prize: "₹1,000",
     icon: Award,
     color: "#CD7F32",
     gradient: "from-amber-600 to-amber-800",
@@ -34,7 +34,7 @@ const mainPrizes = [
 ]
 
 const additionalPrizes = [
-  { icon: Gift, title: "Goodies Worth", value: "₹50,000+", description: "Swag bags for all participants" },
+  { icon: Gift, title: "Goodies Worth", value: "₹1,000+", description: "Swag bags for all participants" },
   { icon: Briefcase, title: "Internship", value: "Opportunities", description: "With partner companies" },
   { icon: GraduationCap, title: "Certificates", value: "For All", description: "Participation & Winner certificates" },
 ]
