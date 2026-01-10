@@ -67,7 +67,7 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
 
   return (
     <motion.div
-      className="relative h-80 cursor-pointer"
+      className="relative h-96 cursor-pointer"
       style={{ perspective: "1000px" }}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
@@ -91,7 +91,7 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
           }}
         >
           {/* Photo */}
-          <div className="relative w-full h-48 overflow-hidden">
+          <div className="relative w-full h-64 overflow-hidden">
             <Image
               src={member.image}
               alt={member.name}

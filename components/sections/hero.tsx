@@ -271,9 +271,7 @@ export default function Hero() {
               Register Now
             </GlowingButton>
           </a>
-          <GlowingButton href="#events" variant="primary" className="w-full sm:w-auto">
-            Explore Events
-          </GlowingButton>
+
         </motion.div>
       </div>
 

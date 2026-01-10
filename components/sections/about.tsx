@@ -9,12 +9,7 @@ import SectionHeader from "@/components/ui/section-header"
 import GlassCard from "@/components/ui/glass-card"
 import AnimatedBackground from "@/components/ui/animated-background"
 
-const stats = [
-  { icon: Accessibility, value: "50+", label: "Events" },
-  { icon: ShieldCheck, value: "5000+", label: "Participants" },
-  { icon: Trophy, value: "₹5L+", label: "Prize Pool" },
-  { icon: Rocket, value: "3", label: "Days" },
-]
+
 
 // Vision, Mission, Objectives data - Updated with new content
 const visionMissionData = [
@@ -400,17 +395,7 @@ export default function About() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          {stats.map((stat, index) => (
-            <ScrollReveal key={stat.label} delay={index * 0.1}>
-              <GlassCard className="text-center py-6 hover-lift">
-                <stat.icon className="w-8 h-8 text-[#00f0ff] mx-auto mb-3" />
-                <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-white/60 text-xs uppercase tracking-wider">{stat.label}</div>
-              </GlassCard>
-            </ScrollReveal>
-          ))}
-        </div>
+
 
         {/* Convenor Section */}
         <ConvenorSection />
