@@ -85,12 +85,13 @@ export default function Competitions() {
 
   return (
     <section className="py-24 px-4 bg-gradient-to-b from-black via-[#0a0a15] to-black">
+      
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           subtitle="Competitions"
           title="Test Your Skills"
           description="Choose from a variety of competitions across different domains and skill levels."
-        />
+        /> 
 
         {/* Category Filter */}
         <ScrollReveal>
@@ -156,6 +157,7 @@ export default function Competitions() {
           ))}
         </div>
       </div>
-    </section>
+      */
+    </section> 
   )
 }

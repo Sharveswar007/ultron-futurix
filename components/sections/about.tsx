@@ -395,7 +395,7 @@ export default function About() {
               <VisionMissionCard key={item.title} item={item} index={index} />
             ))}
           </div>
-        </div>
+        </div> 
 
         {/* Tagline */}
         <ScrollReveal>
