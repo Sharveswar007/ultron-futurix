@@ -77,7 +77,7 @@ export default function Home() {
         <About />
         <Highlights />
         <Events />
-        <Competitions />
+        {/* <Competitions /> */}
         <Gallery />
         <Team />
         <Prizes />
