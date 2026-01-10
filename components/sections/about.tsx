@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Code, Users, Trophy, Rocket, Target, Lightbulb, Heart, GraduationCap, Wrench, Sparkles, Megaphone, Handshake } from "lucide-react"
+import { Accessibility, ShieldCheck, Trophy, Rocket, Target, Lightbulb, Heart, GraduationCap, Cpu, Sparkles, HeartPulse, Handshake } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import ScrollReveal from "@/components/animation/scroll-reveal"
@@ -10,8 +10,8 @@ import GlassCard from "@/components/ui/glass-card"
 import AnimatedBackground from "@/components/ui/animated-background"
 
 const stats = [
-  { icon: Code, value: "50+", label: "Events" },
-  { icon: Users, value: "5000+", label: "Participants" },
+  { icon: Accessibility, value: "50+", label: "Events" },
+  { icon: ShieldCheck, value: "5000+", label: "Participants" },
   { icon: Trophy, value: "₹5L+", label: "Prize Pool" },
   { icon: Rocket, value: "3", label: "Days" },
 ]
@@ -22,7 +22,7 @@ const visionMissionData = [
     title: "Our Vision",
     icon: Target,
     color: "#00f0ff",
-    content: "To inspire and empower every student with the mindset, skills, and confidence needed to shape a technology-driven future.",
+    content: "To inspire and empower every student with the mindset, skills, and confidence needed to shape a technology",
   },
   {
     title: "Our Mission",
@@ -41,34 +41,34 @@ const visionMissionData = [
 // Domains data
 const domainsData = [
   {
-    title: "Technical",
-    icon: Code,
+    title: "Accessibility & Inclusion",
+    icon: Accessibility,
     color: "#00f0ff",
-    description: "Where logic meets innovation — coding, development, and emerging technologies.",
+    description: "Building technology that is usable, inclusive, and empowering for everyone—regardless of ability, language, or access.",
   },
   {
-    title: "Creatives",
-    icon: Sparkles,
+    title: "⁠Cybersecurity & Privacy",
+    icon: ShieldCheck,
     color: "#ff0080",
-    description: "Designs that speak louder than words — visuals, content, and branding.",
+    description: "Designing secure systems that protect data, privacy, and trust in an increasingly connected digital world."
   },
   {
-    title: "Operations",
-    icon: Wrench,
+    title: "IoT & Embedded System",
+    icon: Cpu,
     color: "#8b5cf6",
-    description: "Precision in planning, perfection in execution.",
+    description: "Creating intelligent hardware–software solutions by connecting devices, sensors, and real-world systems.",
   },
   {
-    title: "Public Relations",
-    icon: Megaphone,
+    title: "Healthcar",
+    icon: HeartPulse,
     color: "#00f0ff",
-    description: "Amplifying voices, building connections, and telling impactful stories.",
+    description: "Leveraging technology to improve healthcare access, diagnostics, patient care, and medical workflows.",
   },
   {
-    title: "Sponsorship",
-    icon: Handshake,
+    title: "Open Innovation",
+    icon: Lightbulb,
     color: "#ff0080",
-    description: "Transforming partnerships into opportunities and possibilities.",
+    description: "Solving real-world problems with bold, creative ideas that don’t fit into a single category.",
   },
 ]
 
@@ -407,11 +407,11 @@ export default function About() {
           </div>
         </ScrollReveal>
 
-        {/* Our Domains */}
+        {/* Our TRACKS */}
         <div className="mb-16">
           <ScrollReveal>
             <h3 className="text-2xl font-bold text-center text-white mb-8">
-              Our <span className="text-[#ff0080]">Domains</span>
+              Allowed <span className="text-[#ff0080]">Tracks</span>
             </h3>
           </ScrollReveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
