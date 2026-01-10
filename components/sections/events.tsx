@@ -39,7 +39,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "11:59 PM",
     title: "Online Idea Shortlisting Deadline",
     description:
-      "Registered teams must submit their idea proposal using the standardized PPT template. Submissions will be evaluated based on innovation, feasibility, relevance, and clarity. A maximum of 50 teams will be shortlisted for the offline rounds.",
+      "Submit your idea proposal using the standardized PPT template. Top 50 teams will be shortlisted for offline rounds.",
     icon: FileText,
   },
   {
@@ -48,7 +48,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "8:00 AM",
     title: "Reporting & Registration",
     description:
-      "Shortlisted teams report to the venue for registration and verification before the offline hackathon begins.",
+      "Shortlisted teams report to the venue for registration and verification.",
     icon: MapPin,
   },
   {
@@ -57,7 +57,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "9:00 AM – 5:00 PM",
     title: "Offline Idea Pitching Round",
     description:
-      "Teams present their ideas in a structured 3-minute pitch format. Judges evaluate submissions using a transparent and unbiased marking scheme.",
+      "Teams present their ideas in a 3-minute pitch format. Judges evaluate using a transparent marking scheme.",
     icon: Mic,
   },
   {
@@ -66,7 +66,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "Around 8:00 PM",
     title: "Shortlisted Teams Announcement",
     description:
-      "Between 25 and 30 teams are shortlisted to proceed to the development phase. Only shortlisted teams may continue further.",
+      "Between 25 and 30 teams are shortlisted to proceed to the development phase.",
     icon: Flag,
   },
   {
@@ -75,7 +75,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "Post Announcement",
     title: "Hackathon Development Begins",
     description:
-      "Shortlisted teams begin coding and building their solutions immediately. Mentors will be available for guidance.",
+      "Shortlisted teams begin coding and building their solutions. Mentors available for guidance.",
     icon: Code,
   },
   {
@@ -84,7 +84,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "8:00 AM – 1:00 PM",
     title: "Development & Implementation Phase",
     description:
-      "Teams continue development and finalize implementation. A working prototype, GitHub repository link, and documentation must be submitted.",
+      "Teams finalize implementation. Submit working prototype, GitHub repository link, and documentation.",
     icon: Rocket,
   },
   {
@@ -102,7 +102,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "Post Lunch",
     title: "Top 10 Teams Announcement",
     description:
-      "Top 10 teams are shortlisted based on technical strength, innovation, and impact.",
+      "Top 10 teams shortlisted based on technical strength, innovation, and impact.",
     icon: Trophy,
   },
   {
@@ -111,7 +111,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "2:00 PM – 5:00 PM",
     title: "Final Demonstration & Presentation",
     description:
-      "Top 10 teams present and demonstrate their solutions live. Evaluation focuses on implementation, innovation, and clarity.",
+      "Top 10 teams present and demonstrate their solutions live.",
     icon: Presentation,
   },
   {
@@ -120,7 +120,7 @@ const timelineEvents: TimelineEvent[] = [
     time: "Afternoon",
     title: "Valedictory Ceremony & Results",
     description:
-      "Final results of ULTRON 9.0 are announced. Winners (1st, 2nd, and 3rd place) receive awards and certificates.",
+      "Final results announced. Winners receive awards and certificates.",
     icon: Award,
   },
 ]
@@ -145,9 +145,8 @@ function TimelineCard({
       initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`relative flex ${
-        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-      } gap-8`}
+      className={`relative flex ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        } gap-8`}
     >
       {/* Timeline Dot */}
       <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-[#0a0a0f] border-2 border-[#00f0ff] rounded-full flex items-center justify-center -translate-x-1/2 z-10">
@@ -156,7 +155,7 @@ function TimelineCard({
 
       {/* Card */}
       <div className="ml-16 md:ml-0 md:w-[calc(50%-2rem)]">
-        <div className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
+        <div className="p-4 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm">
           <div className="flex items-center gap-3 mb-3">
             <span className="px-3 py-1 text-xs font-bold bg-[#00f0ff]/20 text-[#00f0ff] rounded-full">
               {event.day}
@@ -188,7 +187,7 @@ function TimelineCard({
 
 export default function Events() {
   return (
-    <section id="timeline" className="py-24 px-4 relative overflow-hidden">
+    <section id="timeline" className="py-18 px-4 relative overflow-hidden">
       <AnimatedBackground variant="grid" />
 
       <div className="max-w-5xl mx-auto relative z-10">
@@ -202,7 +201,7 @@ export default function Events() {
           {/* Vertical Line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#00f0ff]/60 to-transparent md:-translate-x-1/2" />
 
-          <div className="space-y-16">
+          <div className="space-y-10">
             {timelineEvents.map((event, index) => (
               <TimelineCard key={index} event={event} index={index} />
             ))}

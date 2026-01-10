@@ -248,42 +248,18 @@ export default function Hero() {
             <span className="text-[#00f0ff]">Innovators Today.</span>{" "}
             <span className="text-[#ff0080]">Leaders Tomorrow.</span>
           </h2>
-          <p className="text-lg md:text-xl text-white/60 italic">
-            Where Ideas Ignite. Futures Take Shape.
-          </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-white/60 text-base md:text-lg font-light tracking-wide max-w-lg mb-8 leading-relaxed"
-        >
-          <span>Futurix is a student-driven association where curiosity fuels </span>
-          <TextFlip
-            words={["innovation", "creativity", "leadership", "the future"]}
-            className="font-bold text-[#00f0ff]"
-          />
-          <span> and passion transforms students into tomorrow&apos;s changemakers.</span>
-        </motion.div>
 
-        {/* Event Date */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="flex items-center gap-4 mb-8"
-        >
-          <div className="h-[2px] w-12 bg-gradient-to-r from-[#00f0ff] to-[#ff0080]" />
-          <span className="text-white text-sm font-mono tracking-widest">STUDENT TECHNOLOGY ASSOCIATION</span>
-        </motion.div>
+
+
 
         {/* CTA Button with glow effect */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex gap-4"
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex gap-3 mt-6"
         >
           <GlowingButton href="#register" variant="rainbow">
             Register Now
