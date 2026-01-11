@@ -32,10 +32,10 @@ export default function Prizes() {
                 Total Prize Pool
               </h3>
               <div className="text-3xl font-bold gradient-text mb-2">
-                ₹3,000
+                ₹30,000
               </div>
               <p className="text-white/60 text-sm">
-                A total prize pool of ₹3,000 for ULTRON 9.0.
+                A total prize pool of ₹30,000 for ULTRON 9.0.
               </p>
             </GlassCard>
           </ScrollReveal>
