@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Linkedin, Instagram, Mail } from "lucide-react"
+import { Linkedin, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import ScrollReveal from "@/components/animation/scroll-reveal"
@@ -18,6 +18,7 @@ const teamMembers = [
     color: "#00f0ff",
     image: "/images/team/core-Abhi.jpg",
     backContent: "Leading Futurix with vision and passion for technology innovation.",
+    linkedin: "https://np.linkedin.com/in/abhikharel",
   },
   {
     name: "Debosmita Paul",
@@ -26,6 +27,7 @@ const teamMembers = [
     color: "#ff0080",
     image: "/images/team/core-Debosmita.jpg",
     backContent: "Supporting leadership and driving strategic initiatives.",
+    linkedin: "https://www.linkedin.com/in/debosmita-paul-746121222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
   },
   {
     name: "Raunak Raj",
@@ -34,6 +36,7 @@ const teamMembers = [
     color: "#8b5cf6",
     image: "/images/team/core-Raunak.jpg",
     backContent: "Managing communications and administrative excellence.",
+    linkedin: "https://www.linkedin.com/in/raunak-raj-034403290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
   },
   {
     name: "Varshini Myadam",
@@ -42,6 +45,7 @@ const teamMembers = [
     color: "#00f0ff",
     image: "/images/team/core-Varshini.jpg",
     backContent: "Coordinating team activities and member engagement.",
+    linkedin: "https://www.linkedin.com/in/varshini-myadam-b71641287?",
   },
   {
     name: "Aayush Mishra",
@@ -50,6 +54,7 @@ const teamMembers = [
     color: "#ff0080",
     image: "/images/team/core-Aayush.jpg",
     backContent: "Managing finances and ensuring fiscal responsibility.",
+    linkedin: "https://Linkedin.com/in/iamaayushmishra",
   },
   {
     name: "Iraa Jaykumar",
@@ -58,6 +63,7 @@ const teamMembers = [
     color: "#8b5cf6",
     image: "/images/team/core-Iraa.jpeg",
     backContent: "Driving technical excellence and innovation at Futurix.",
+    linkedin: "https://www.linkedin.com/in/iraa-jayakumar",
   },
 ]
 
@@ -160,22 +166,7 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
             {/* Social Icons */}
             <div className="flex gap-3">
               <motion.a
-                href="https://www.instagram.com/futurix.ctech"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60"
-                whileHover={{
-                  scale: 1.1,
-                  borderColor: "#E1306C",
-                  color: "#E1306C",
-                  boxShadow: "0 0 20px rgba(225, 48, 108, 0.4)",
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Instagram size={18} />
-              </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/company/futurix-srmist"
+                href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60"
@@ -188,19 +179,6 @@ function TeamCard({ member, index }: { member: typeof teamMembers[0]; index: num
                 whileTap={{ scale: 0.95 }}
               >
                 <Linkedin size={18} />
-              </motion.a>
-              <motion.a
-                href="mailto:contact@futurix.org"
-                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60"
-                whileHover={{
-                  scale: 1.1,
-                  borderColor: member.color,
-                  color: member.color,
-                  boxShadow: `0 0 20px ${member.color}40`,
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Mail size={18} />
               </motion.a>
             </div>
           </div>
