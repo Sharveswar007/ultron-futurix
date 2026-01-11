@@ -10,90 +10,130 @@ import AnimatedBackground from "@/components/ui/animated-background"
 const galleryCategories = ["All", "Ultron 8.0", "Lens Lumina 2025", "Lens Lumina 2024"]
 
 const galleryImages = [
+ 
+  /* =====================
+     Ultron 8.0 (5 images)
+  ====================== */
+  
   {
     id: 1,
     category: "Ultron 8.0",
-    src: "/images/gallery/IMG-20250203-WA0078.jpg",
-    title: "Ultron 8.0 Event",
-    color: "#00f0ff"
+    src: "/images/gallery/ultron 8.0/U8-2.jpg",
+    title: "Open Mic",
+    color: "#ff0080",
   },
   {
     id: 2,
     category: "Ultron 8.0",
-    src: "/images/gallery/IMG-20250203-WA0090.jpg",
-    title: "Ultron 8.0 Moments",
-    color: "#ff0080"
+    src: "/images/gallery/ultron 8.0/U8-1.jpg",
+    title: "Participants",
+    color: "#00f0ff",
   },
   {
     id: 3,
     category: "Ultron 8.0",
-    src: "/images/gallery/IMG-20250203-WA0106.jpg",
-    title: "Ultron 8.0 Highlights",
-    color: "#8b5cf6"
+    src: "/images/gallery/ultron 8.0/U8-5.jpg",
+    title: "Hackathon",
+    color: "#ff0080",
   },
+
   {
     id: 4,
     category: "Ultron 8.0",
-    src: "/images/gallery/IMG-20250203-WA0108.jpg",
-    title: "Ultron 8.0 Team",
-    color: "#00f0ff"
+    src: "/images/gallery/ultron 8.0/U8-3.JPG",
+    title: "Organizing Team",
+    color: "#8b5cf6",
   },
   {
     id: 5,
     category: "Ultron 8.0",
-    src: "/images/gallery/WhatsApp Image 2025-02-01 at 14.24.29_3755ebea.jpg",
-    title: "Ultron 8.0 Celebration",
-    color: "#ff0080"
+    src: "/images/gallery/ultron 8.0/U8-4.jpg",
+    title: "Winners",
+    color: "#00f0ff",
   },
+  
+  /* =========================
+     Lens Lumina 2024 (5)
+  ========================== */
   {
     id: 6,
-    category: "Ultron 8.0",
-    src: "/images/gallery/IMG_0031.JPG",
-    title: "Ultron 8.0 Activities",
-    color: "#8b5cf6"
+    category: "Lens Lumina 2024",
+    src: "/images/gallery/Lens lumina - 2024/LL24-2.jpg",
+    title: "Participants",
+    color: "#ff0080",
   },
   {
     id: 7,
-    category: "Lens Lumina 2025",
-    src: "/images/gallery/IMG_7860.JPG",
-    title: "Lens Lumina 2025",
-    color: "#00f0ff"
+    category: "Lens Lumina 2024",
+    src: "/images/gallery/Lens lumina - 2024/LL24-5.jpg",
+    title: "Event highlights",
+    color: "#ff0080",
   },
   {
     id: 8,
-    category: "Lens Lumina 2025",
-    src: "/images/gallery/IMG_7929.JPG",
-    title: "Photography Showcase",
-    color: "#ff0080"
+    category: "Lens Lumina 2024",
+    src: "/images/gallery/Lens lumina - 2024/LL24-3.jpg",
+    title: "Lens Lumina 2024",
+    color: "#8b5cf6",
   },
   {
     id: 9,
     category: "Lens Lumina 2024",
-    src: "/images/gallery/20240723_111640AMByGPSMapCamera.jpg",
-    title: "Lens Lumina 2024",
-    color: "#8b5cf6"
+    src: "/images/gallery/Lens lumina - 2024/ll24-1.jpg",
+    title: "Organizing Team",
+    color: "#00f0ff",
   },
   {
     id: 10,
     category: "Lens Lumina 2024",
-    src: "/images/gallery/20240723_115800AMByGPSMapCamera.jpg",
-    title: "Visual Expression",
-    color: "#00f0ff"
+    src: "/images/gallery/Lens lumina - 2024/LL24-4.jpg",
+    title: "Winners",
+    color: "#00f0ff",
   },
+  
+
+  /* =========================
+     Lens Lumina 2025 (5)
+  ========================== */
   {
     id: 11,
-    category: "Lens Lumina 2024",
-    src: "/images/gallery/Lens Lumina 2024.jpg",
-    title: "Creative Photography",
-    color: "#ff0080"
+    category: "Lens Lumina 2025",
+    src: "/images/gallery/Lens Lumina - 2025/LL25-1.jpg",
+    title: "Participants",
+    color: "#00f0ff",
   },
   {
     id: 12,
-    category: "Ultron 8.0",
-    src: "/images/gallery/20240723_10939PMByGPSMapCamera.jpg",
-    title: "Event Night",
-    color: "#8b5cf6"
+    category: "Lens Lumina 2025",
+    src: "/images/gallery/Lens Lumina - 2025/LL25-2.jpg",
+    title: "Participants",
+    color: "#ff0080",
   },
+  {
+    id: 13,
+    category: "Lens Lumina 2025",
+    src: "/images/gallery/Lens Lumina - 2025/LL25-3.jpg",
+    title: "Winners",
+    color: "#8b5cf6",
+  },
+  {
+    id: 14,
+    category: "Lens Lumina 2025",
+    src: "/images/gallery/Lens Lumina - 2025/LL25-4.jpg",
+    title: "Organizing Team",
+    color: "#00f0ff",
+  },
+  {
+    id: 15,
+    category: "Lens Lumina 2025",
+    src: "/images/gallery/Lens Lumina - 2025/LL25-5.jpg",
+    title: "Organizing Team",
+    color: "#ff0080",
+  },
+
+
+
+
 ]
 
 export default function Gallery() {
